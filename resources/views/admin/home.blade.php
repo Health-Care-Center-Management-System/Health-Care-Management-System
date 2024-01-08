@@ -16,7 +16,7 @@
        @include('admin.navbar')
       
         <!-- partial -->
-      @include('admin.body')
+     @include('admin.body') 
  
     <!-- container-scroller -->
     <!-- plugins:js -->

@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Models\Doctor;
 
+use App\Models\Customer;
+
 use App\Models\Appointment;
 
 use Notification;
@@ -214,4 +216,6 @@ else
         return redirect()->back()->with('message','Email send is successful');
     }
 
+   
+   
 }

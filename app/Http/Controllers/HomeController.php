@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
@@ -23,9 +24,9 @@ class HomeController extends Controller
                 $doctor = doctor::all();
             return view('user.home', compact('doctor'));
             }
-            else{
+          else{
                 return view('admin.home');
-             }
+             } 
         }
         else{
             return redirect()->back();
