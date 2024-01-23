@@ -70,25 +70,13 @@
             <li class="nav-item active">
               <a class="nav-link" href="home">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="doctors.html">Doctors</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog.html">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-
+            
             @if(Route::has('login'))
 
             @auth
 
             <li class="nav-item">
-              <a class="nav-link" style="background-color: rgb(126, 126, 2); color: white;" href="{{url('myappointment')}}">My Appointment</a>
+              <a class="nav-link" style="background-color: rgb(126, 126, 2); color: white;" href="{{url('myappointment')}}">Scheduled Appointments</a>
             </li>
 
             <x-app-layout>
@@ -184,11 +172,11 @@
     </div> <!-- .bg-light -->
   </div> <!-- .bg-light -->
 
-  @include('user.doctor')
+  @include('doctor.doctor')
 
-  @include('user.latestnews')
+  @include('doctor.latestnews')
 
-  @include ('user.appointment')
+  @include ('doctor.appointment')
 
  <!-- .banner-home -->
 
@@ -240,7 +228,7 @@
 
       <hr>
 
-      <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MACode ID</a>. All right reserved</p>
+      <p id="copyright">Copyright &copy; 2024 John Rollyver Espinosa. All right reserved</p>
     </div>
   </footer>
 

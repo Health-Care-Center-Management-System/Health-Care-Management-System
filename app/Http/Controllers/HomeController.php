@@ -22,11 +22,18 @@ class HomeController extends Controller
             if(Auth::user()->usertype=='0')
             {
                 $doctor = doctor::all();
-            return view('user.home', compact('doctor'));
+            return view('user.homepage', compact('doctor'));
+            }
+          else if(Auth::user()->usertype=='2')
+            {
+               $doctor = doctor::all();
+               return view('doctor.home', compact('doctor'));
             }
           else{
                 return view('admin.home');
              } 
+
+            
         }
         else{
             return redirect()->back();
@@ -36,13 +43,13 @@ class HomeController extends Controller
     {
        if(Auth::id())
        {
-        return redirect('home');
+        return redirect('homepage');
        }
        else
        {
         $doctor = doctor::all();
 
-        return view('user.home', compact('doctor'));
+        return view('user.homepage', compact('doctor'));
        }
     }
 

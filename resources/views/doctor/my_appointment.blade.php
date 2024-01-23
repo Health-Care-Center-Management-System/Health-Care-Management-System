@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>LGU Healthcare Management System</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
-    <link href="../assets/img/favicon.ico" rel="icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
+  <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <title>My Appointment</title>
 
-    <!-- Libraries Stylesheet -->
-    <link href="../assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="../assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/maicons.css">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/bootstrap.css">
 
-    <!-- Template Stylesheet -->
-    <link href="../assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/vendor/owl-carousel/css/owl.carousel.css">
+
+  <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
+
+  <link rel="stylesheet" href="../assets/css/theme.css">
 </head>
-
 <body>
   <div class="container-fluid sticky-top bg-white shadow-sm">
     <div class="container">
@@ -87,13 +79,12 @@
   </div> <!-- .container -->
 </nav>
     </div>
-</div>
     
 
- <div align="center" style="padding: 70px; background-color: gray;">
+ <div  style="padding:70px;">
     <table>
 
-<tr style="background-color: gray;"> 
+<tr style="background-color: black;"> 
     <th style="padding:10px; font-size: 20px; color:white;">Doctor Name</th>
     <th style="padding:10px; font-size: 20px; color:white;">Date</th>
     <th style="padding:10px; font-size: 20px; color:white;">Message</th>
@@ -103,12 +94,12 @@
 
 @foreach($appoint as $appoints)
 
-<tr align="center" style="background-color:gray;" >
+<tr style="background-color:black;" >
     <td style="padding:10px;  color:white;">{{$appoints->doctor}} </td>
     <td style="padding:10px;  color:white;">{{$appoints->date}}</td>
     <td style="padding:10px;  color:white;">{{$appoints->message}}</td>
     <td style="padding:10px;  color:white;">{{$appoints->status}}</td>
-    <td><a class="btn btn-danger" onclick="return confirm('Are you sure to cancel this?')"  href="{{url('cancel_appoint',$appoints->id)}}">Cancel</td>
+    <td><a class="btn btn-danger" onclick="return confirm('Are you sure to delete this?')"  href="{{url('cancel_appoint',$appoints->id)}}">Cancel</td>
 </tr>
 
 @endforeach
