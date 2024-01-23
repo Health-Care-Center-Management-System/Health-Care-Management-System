@@ -2072,7 +2072,7 @@ textarea.form-control-lg {
     vertical-align: middle;
     cursor: pointer;
     user-select: none;
-    background-color: transparent;
+    background-color: #dc3545;
     border: 1px solid transparent;
     padding: .375rem .75rem;
     font-size: 1rem;
@@ -5830,7 +5830,7 @@ textarea.form-control-lg {
     word-break: break-word !important;
 }
 .text-primary {
-    color: #13C5DD !important;
+    color: #dc3545 !important;
 }
 .text-secondary {
     color: #354F8E !important;
