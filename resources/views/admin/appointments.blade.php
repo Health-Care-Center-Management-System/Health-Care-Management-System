@@ -29,8 +29,46 @@
 </head>
 
 <body>
+    <!-- Topbar Start -->
+    <!-- <div class="container-fluid py-2 border-bottom d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-decoration-none text-body pe-3" href=""><i class="bi bi-telephone me-2"></i>+012 345 6789</a>
+                        <span class="text-body">|</span>
+                        <a class="text-decoration-none text-body px-3" href=""><i class="bi bi-envelope me-2"></i>info@example.com</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-body px-2" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-body ps-2" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     Topbar End -->
 
-        
+
+    <!-- Navbar Start -->
+   
+            
+
         <div class="container-fluid sticky-top bg-white shadow-sm" >
             <div class="container">
       
@@ -46,27 +84,43 @@
                 <div class="navbar-nav ms-auto py-0">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{url('home')}}">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{url('showappointment')}}">Show Appointment</a>
-                  </li>
+                  <a class="nav-link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('showdoctor')}}">Show Doctor</a>
-                  </li>
+                  <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#service">Services</a>
+                </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#contact">Contact</a>
                 </li>
-
-               
+    <!--
+                @if(Route::has('login'))
+    
+                @auth
+    
+                <li class="nav-item">
+                  <a class="nav-link"  href="{{url('myappointment')}}">My Appointment</a>
+                </li>
     
                 <x-app-layout>
                
                 </x-app-layout>
     
-              
-           
+                @else
+                
+                <li class="nav-item" style="margin: 20px 0px 0px 10px ;">
+                  <a class="btn btn-primary ml-lg-3" style="font-size: 20px;" href="{{route('login')}}">Login</a>
+                </li>
+    
+                <li class="nav-item" style="margin: 20px 0px 0px 10px ;">
+                    <a class="btn btn-primary ml-lg-3" style="font-size: 20px;" href="{{route('register')}}">Register</a>
+                  </li>
+    
+                 @endAuth
+                 @endif 
+            -->
               </ul>
                 </div>
             </div> <!-- .navbar-collapse -->
@@ -74,82 +128,38 @@
         </nav>
             </div>
         </div>
+      
+       <div class="container-fluid page-body-wrapper">
 
-    <!-- Navbar End -->
+        <div align="center" style="padding-top:100px;">
 
+            <table>
+                <tr style="background-color: bisque; color: black;">
+                    <th style="padding:10px">Doctor Name</th>
+                    <th style="padding:10px">Email Address</th>
+                    <th style="padding:10px">Phone</th>
+                    <th style="padding:10px">Address</th>
+                    <th style="padding:10px">Delete</th>
+                    <th style="padding:10px">Update</th>
+                </tr>
 
-    <!-- Hero Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 hero-header heroheight" id="home">
-        <div class="container py-5">
-            <div class="row justify-content-start">
-                <div class="col-lg-8 text-center text-lg-start">
-                      <!--
-                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome To Brgy. 14 Healthcare</h5>
-                    <h1 class="display-1 text-white mb-md-4">Best Barangay Healthcare at your Service</h1>-->
-                    <div class="pt-2">
-                       
-                        <a href="#appointment" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Appointment</a>
-                    </div>
-                    -->
-                </div>
-            </div>
+                @foreach ($data as $appointments)
+                <tr align="center" style="background-color: rgb(252, 232, 209); color: black;">
+
+                    <td>{{$appointments->name}}</td>
+                    <td>{{$appointments->email}}</td>
+                    <td>{{$appointments->phone}}</td>
+                    <td>{{$appointments->address}}</td>
+            
+                    <td><a onclick="return confirm('Are you sure to delete this?')" class="btn btn-danger" href="{{url('deletecustomer', $appointments->id)}}">Delete</td>
+                    <td><a class="btn btn-primary" href="{{url('update_customer', $appointments->id)}}">Update</td>
+                   
+
+                </tr>
+                @endforeach
         </div>
-    </div>
-    <!-- Hero End -->
-
-
-    <!-- About Start -->
-    <div class="container-fluid py-5" id="about">
-        <div class="container">
-            <div class="row gx-5">
-                <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded" src="../assets/img/about.jpg" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="mb-4">
-                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">About Us</h5>
-                        <h1 class="display-4">Best Medical Care For Yourself and Your Family</h1>
-                    </div>
-                    <p>Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
-                    <div class="row g-3 pt-3">
-                        <div class="col-sm-3 col-6">
-                            <div class="bg-light text-center rounded-circle py-4">
-                                <i class="fa fa-3x fa-user-md text-primary mb-3"></i>
-                                <h6 class="mb-0">Qualified<small class="d-block text-primary">Doctors</small></h6>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-6">
-                            <div class="bg-light text-center rounded-circle py-4">
-                                <i class="fa fa-3x fa-procedures text-primary mb-3"></i>
-                                <h6 class="mb-0">Emergency<small class="d-block text-primary">Services</small></h6>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-6">
-                            <div class="bg-light text-center rounded-circle py-4">
-                                <i class="fa fa-3x fa-microscope text-primary mb-3"></i>
-                                <h6 class="mb-0">Accurate<small class="d-block text-primary">Testing</small></h6>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-6">
-                            <div class="bg-light text-center rounded-circle py-4">
-                                <i class="fa fa-3x fa-ambulance text-primary mb-3"></i>
-                                <h6 class="mb-0">Free<small class="d-block text-primary">Ambulance</small></h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  
-    
-
-  
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light mt-5 py-5">
+       </div>
+       <div class="container-fluid bg-dark text-light mt-5 py-5">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
@@ -212,6 +222,5 @@
 
     <!-- Template Javascript -->
     <script src="../assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>

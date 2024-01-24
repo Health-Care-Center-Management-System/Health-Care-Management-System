@@ -36,14 +36,14 @@ class HomeController extends Controller
             
         }
         else{
-            return redirect()->back();
+            return redirect()->back()->back();
         }
     }
     public function index()
     {
        if(Auth::id())
        {
-        return redirect('homepage');
+        return redirect('user.homepage');
        }
        else
        {

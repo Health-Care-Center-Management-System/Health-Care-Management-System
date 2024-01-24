@@ -65,10 +65,12 @@ Route::post('/sendemail/{id}', [AdminController::class, 'sendemail']);
 Route::get('/add_customer', [CustomerController::class, 'add_customer']);
 Route::post('/insert_customer', [CustomerController::class, 'Store']);
 
-Route::get('/all_customer', [CustomerController::class, 'all_customer']);
+Route::get('/appointments', [CustomerController::class, 'appointments']);
 
 Route::get('/deletecustomer/{id}', [CustomerController::class, 'deletecustomer']);
 
 Route::get('/update_customer/{id}', [CustomerController::class, 'update_customer']);
 
 Route::post('/edit_customer/{id}', [CustomerController::class, 'edit_customer']);
+
+Route::get('/admin', [AdminController::class, 'adminviewhome']);

@@ -34,6 +34,24 @@ class AdminController extends Controller
         }
        
     }
+    public function adminviewhome()
+    {
+        if(Auth::id())
+        {
+            if(Auth::user()->usertype==1)
+            {
+                return view('admin.home');
+            }
+            else{
+                return redirect()->back();
+            }
+        }
+        else
+        {
+            return redirect('user.homepage');
+        }
+       
+    }
 
     public function upload(Request $request)
     {
