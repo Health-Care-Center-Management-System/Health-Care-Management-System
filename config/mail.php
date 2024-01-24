@@ -100,7 +100,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'hospitalmgmt115@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'Admin Hospital Management'),
+        'name' => env('MAIL_FROM_NAME', 'Pinagsama Health Care Center'),
     ],
 
     /*

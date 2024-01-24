@@ -13,7 +13,9 @@ use App\Models\Customer;
 use App\Models\Appointment;
 
 use Notification;
-use App\Notifications\TestingNotification;
+use App\Notifications\AppointmentSchedule;
+use Illuminate\Notifications\Notification as NotificationsNotification;
+
 class AdminController extends Controller
 {
     public function addview()
@@ -230,7 +232,8 @@ else
             'endpart' => $request->endpart
         ];
 
-        Notification::send($data,new TestingNotification($details));
+        Notification::send($data,new 
+        AppointmentSchedule($details));
         return redirect()->back()->with('message','Email send is successful');
     }
 

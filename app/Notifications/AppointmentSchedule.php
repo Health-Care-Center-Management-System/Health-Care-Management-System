@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class TestingNotification extends Notification
+class AppointmentSchedule extends Notification
 {
     use Queueable;
 
