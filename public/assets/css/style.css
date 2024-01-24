@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #13C5DD;
+    --primary: #dc3545;
     --secondary: #354F8E;
     --light: #EFF5F9;
     --dark: #1D2A4D;
@@ -98,11 +98,8 @@
 }
 
 .hero-header {
-    background: url(../img/cover.jpg) top center no-repeat;
+    background: url(../img/TBTL.png) top center no-repeat;
     background-size: cover;
-}
-.heroheight{
-    height:600px;
 }
 
 .service-item {
@@ -198,9 +195,13 @@
     display: flex;
     justify-content: space-between;
 }
+@media (min-width: 1284px){
+    .heroheight{
+        height:750px;
+    }
+}
 
-
-@media (max-width:624px) {
+@media (min-width:624px) {
     .heroheight{
         height:150px;
     }

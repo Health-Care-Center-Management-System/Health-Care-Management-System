@@ -22,7 +22,7 @@
     <link href="../assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="../assets/css/style.css" rel="stylesheet">
@@ -37,8 +37,10 @@
             <div class="container">
       
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
-            <a href="#home" class="navbar-brand">
-                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>Brgy 14 Healthcare</h1>
+
+            <a href="/home" class="navbar-brand">
+                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>PINAGSAMA HEALTHCARE</h1>
+
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -100,15 +102,14 @@
     <div class="container-fluid bg-primary py-5 mb-5 hero-header heroheight" id="home">
         <div class="container py-5">
             <div class="row justify-content-start">
-                <div class="col-lg-8 text-center text-lg-start">
+                <div class="col-lg-50 text-center text-lg-start">
                       <!--
                     <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome To Brgy. 14 Healthcare</h5>
                     <h1 class="display-1 text-white mb-md-4">Best Barangay Healthcare at your Service</h1>-->
-                    <div class="pt-2">
+                    <div class="pt-2" align="center">
                        
-                        <a href="#appointment" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Appointment</a>
+                        <a href="#appointment" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2 appointmentbtn">Book An Appointment</a>
                     </div>
-                    -->
                 </div>
             </div>
         </div>
