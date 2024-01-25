@@ -257,3 +257,24 @@
     color: #ffff;
     font-size: 50px;
 }
+
+.hotlineheader {
+background: url(../img/Hot-L.png) top center no-repeat;
+background-size: cover;
+}
+.hotlineheight{
+height:300px;
+}
+
+@media (min-width: 300px) {
+    .hotlineheader .hotlineheight{
+        background: url(../img/Hot-L.png) top center no-repeat;
+        height: 300px;
+    }
+}
+@media (max-width: 999px) {
+    .hotlineheader {
+        background: url(../img/Hotline\ Portrait.png) top center no-repeat;
+        height: 500px;
+    }
+}

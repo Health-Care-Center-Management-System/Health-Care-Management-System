@@ -29,6 +29,8 @@
 
     <!-- fontawesome icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- icon icon -->
+    <link rel="stylesheet" href="style.css"></head>
 </head>
 
 <body>
@@ -42,7 +44,7 @@
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
 
             <a href="/" class="navbar-brand">
-                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>PINAGSAMA HEALTHCARE</h1>
+                <h1 class="m-0 text-uppercase text-primary"><i class="fa-solid fa-hospital me-2"></i></i>PINAGSAMA HEALTHCARE</h1>
 
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -185,7 +187,7 @@
     <div class="container-fluid py-5" id="service">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Services</h5>
+                <h3 class="d-inline-block text-primary text-uppercase border-bottom border-5">Services</h3>
                 <h1 class="display-4">Excellent Medical Services</h1>
             </div>
             <div class="row g-5">
@@ -195,7 +197,7 @@
                         <i class="fa-solid fa-stethoscope icon text-white"></i>
                         </div>
                         <h4 class="mb-3">Medical Checkup</h4>
-                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit</p>
+                        <p class="m-0">Expert care for your health, including check-ups, diagnostics, and treatment to promote overall well-being.</p>
                         <a class="btn btn-lg btn-primary rounded-pill" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -207,7 +209,7 @@
                         <i class="fa-solid fa-lungs icon text-white"></i>
                         </div>
                         <h4 class="mb-3">TB DOTS</h4>
-                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit</p>
+                        <p class="m-0">Treatment for tuberculosis, ensuring patients take their medications under supervision for better results.</p>
                         <a class="btn btn-lg btn-primary rounded-pill" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -219,7 +221,7 @@
                             <i class="fa-solid fa-tooth icon text-white"></i>
                         </div>
                         <h4 class="mb-3">Dental</h4>
-                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit</p>
+                        <p class="m-0"> Specialized care for oral health, including check-ups, cleanings, and treatments to maintain healthy teeth and gums.</p>
                         <a class="btn btn-lg btn-primary rounded-pill" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -228,10 +230,10 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
                         <div class="service-icon mb-4">
-                            <i class="fa fa-2x fa-ambulance text-white"></i>
+                        <i class="fa-solid fa-paw icon text-white"></i>
                         </div>
                         <h4 class="mb-3">Animal Bite</h4>
-                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit</p>
+                        <p class="m-0"> Prompt and specialized care for bites, preventing infection and addressing potential rabies concerns through thorough evaluation and treatment.</p>
                         <a class="btn btn-lg btn-primary rounded-pill" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -243,7 +245,7 @@
                             </i><i class="fa-solid fa-person-breastfeeding icon text-white"></i>
                         </div>
                         <h4 class="mb-3">Pre-natal & Family Planning</h4>
-                        <p class="m-0">safeguards the health of expecting mothers and babies. Planning empowers individuals to make informed decisions about when and how to expand their families</p>
+                        <p class="m-0">Care for expectant mothers and individuals seeking family planning, including prenatal check-ups, counseling, and contraception guidance for informed family choices</p>
                         <a class="btn btn-lg btn-primary rounded-pill" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -252,10 +254,10 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
                         <div class="service-icon mb-4">
-                            <i class="fa fa-2x fa-microscope text-white"></i>
+                        <i class="fa-solid fa-syringe icon text-white"></i>
                         </div>
-                        <h4 class="mb-3">Blood Testing</h4>
-                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit</p>
+                        <h4 class="mb-3">Immunization</h4>
+                        <p class="m-0"> Vital preventive healthcare, providing vaccines to bolster the immune system against infectious diseases, safeguarding individuals and communities.</p>
                         <a class="btn btn-lg btn-primary rounded-pill" href="">
                             <i class="bi bi-arrow-right"></i>
                         </a>
@@ -273,12 +275,14 @@
             <div class="row gx-5">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="mb-4">
-                        <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Appointment</h5>
+                        <h5 class="d-inline-block text-black text-uppercase border-bottom border-5">Appointment</h5>
                         <h1 class="display-4">Make An Appointment For Your Family</h1>
+                   
                     </div>
-                    <p class="text-white mb-5">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
-                    <a class="btn btn-dark rounded-pill py-3 px-5 me-3" href="#doctors">Find Doctor</a>
-                    <a class="btn btn-outline-dark rounded-pill py-3 px-5" href="#service">Read More</a>
+                    <p class="text-black mb-5">Secure your family's well-being with ease by scheduling appointments for all your health needs. Whether it's routine check-ups, vaccinations, or consultations, our convenient appointment booking ensures that your family's health remains a top priority. Embrace proactive healthcare by making appointments that suit your schedule, keeping your loved ones on the path to optimal health.</p>
+                   <!-- <a class="btn btn-dark rounded-pill py-3 px-5 me-3" href="#doctors">Find Doctor</a>
+                    <a class="btn btn-outline-dark rounded-pill py-3 px-5" href="#service">Read More</a> 
+-->
                 </div>
                 <div class="col-lg-6">
                     <div class="bg-white text-center rounded p-5">
@@ -288,18 +292,23 @@
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
                                     <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Choose Department</option>
-                                        <option value="1">Department 1</option>
-                                        <option value="2">Department 2</option>
-                                        <option value="3">Department 3</option>
+                                        <option selected>Choose Appointment</option>
+                                        <option value="1">Visit on site</option>
+                                        <option value="2">Online Consulation</option>
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-6" data-wow-delay="300ms">
                                     <select class="form-select bg-light border-0" style="height: 55px;" name="doctor">
-                                        <option selected>Select Doctor</option>
-                                        <option value="1">Doctor 1</option>
-                                        <option value="2">Doctor 2</option>
-                                        <option value="3">Doctor 3</option>
+                                        <option selected>Select Services</option>
+                                        <option value="1">Medical Checkup</option>
+                                        <option value="2">TB Dots</option>
+                                        <option value="3">Dental</option>
+                                        <option value="3">Animal Bites</option>
+                                        <option value="3">Pre-natal & Family Planning</option>
+                                        <option value="3">Immunization</option>
+                                        <option value="3">Swab Test</option>
+                                        <option value="3">HIV Test</option>
+
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-6">
@@ -336,7 +345,7 @@
 
 
     <!-- Search Start -->
-  
+  <!--
     <div class="container-fluid bg-primary my-5 py-5" id="doctors">
         
         <div class="container py-5">
@@ -359,8 +368,18 @@
             </div>
         </div>
     </div>
-  
+-->
 
+<!--Footer 1 Start -->
+<div class="container-fluid bg-primary py-5 mb-5 hotlineheader hotlineheight" id="home">
+        <div class="container py-5">
+            <div class="row justify-content-start">
+                <div class="col-lg-50 text-center text-lg-start">
+</div>
+</div>
+</div>
+</div>
+                    
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light mt-5 py-5">
         <div class="container py-5">
