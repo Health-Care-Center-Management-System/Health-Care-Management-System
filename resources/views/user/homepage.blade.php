@@ -41,7 +41,7 @@
       
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
 
-            <a href="/home" class="navbar-brand">
+            <a href="/" class="navbar-brand">
                 <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>PINAGSAMA HEALTHCARE</h1>
 
             </a>
