@@ -59,12 +59,12 @@ class HomeController extends Controller
 
         $data->name=$request->name;
         $data->email=$request->email;
+        $data->type=$request->type;
+        $data->service=$request->service;
         $data->date=$request->date;
-        $data->phone=$request->number;
-        $data->message=$request->message;
-        $data->doctor=$request->doctor;
-        $data->status='In progress';
-
+        $data->time=$request->time;
+     
+ 
         if(Auth::id())
         {
             $data->user_id=Auth::user()->id;

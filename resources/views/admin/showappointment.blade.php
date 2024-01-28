@@ -79,16 +79,13 @@
             <div align="center" style="padding-top:10px;">
                 <table>
                     <tr style="background-color: bisque;">
-                        <th style="padding:10px">Customer Name</th>
+                        <th style="padding:10px">Name</th>
                         <th style="padding:10px">Email</th>
-                        <th style="padding:10px">Phone</th>
-                        <th style="padding:10px">Doctor Name</th>
+                        <th style="padding:10px">Appointment Type</th>
+                        <th style="padding:10px">Service</th>
                         <th style="padding:10px">Date</th>
-                        <th style="padding:10px">Message</th>
-                        <th style="padding:10px">Status</th>
-                        <th style="padding:10px">Approved</th>
-                        <th style="padding:10px">Cancelled</th>
-                        <th style="padding:10px">Send Mail</th>
+                        <th style="padding:10px">Time</th>
+     
 
 
                     </tr>
@@ -96,14 +93,15 @@
                     <tr align="center" style="background-color: bisque;">
                         <td>{{$appoint->name}}</td>
                         <td>{{$appoint->email}}</td>
-                        <td>{{$appoint->phone}}</td>
-                        <td>{{$appoint->doctor}}</td>
+                        <td>{{$appoint->type}}</td>
+                        <td>{{$appoint->service}}</td>
                         <td>{{$appoint->date}}</td>
-                        <td>{{$appoint->message}}</td>
-                        <td>{{$appoint->status}}</td>
+                        <td>{{$appoint->time}}</td>
+                        
 
+                <!--    <td>{{$appoint->status}}</td>
                         <td><a class="btn btn-success" href="{{url('approved', $appoint->id)}}">Approved</td>
-                        <td><a class="btn btn-danger" href="{{url('cancelled', $appoint->id)}}">Cancelled</td>
+                        <td><a class="btn btn-danger" href="{{url('cancelled', $appoint->id)}}">Cancelled</td> -->
                         <td><a class="btn btn-primary" href="{{url('emailview', $appoint->id)}}">Send Mail</td>
                     </tr>
 

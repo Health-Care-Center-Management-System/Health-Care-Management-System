@@ -30,7 +30,8 @@
     <!-- fontawesome icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- icon icon -->
-    <link rel="stylesheet" href="style.css"></head>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -104,6 +105,18 @@
 
 
     <!-- Hero Start -->
+    @if(session()->has('message'))
+    <div class="alert alert-success" >
+  
+      <button type="button" class="close" data-dismiss="alert"> x </button>
+      {{session()->get('message')}}
+  
+    </div>
+    @endif
+
+
+
+   
     <div class="container-fluid bg-primary py-5 mb-5 hero-header heroheight" id="home">
         <div class="container py-5">
             <div class="row justify-content-start">
@@ -291,46 +304,51 @@
                             @csrf
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Choose Appointment</option>
-                                        <option value="1">Visit on site</option>
-                                        <option value="2">Online Consulation</option>
+                                    <select class="form-select bg-light border-0" style="height: 55px;" name="type" placeholder="Choose Appointment">
+                                        
+                                        <option value="Visit on site">Visit on site</option>
+                                        <option value="Online Consulation">Online Consulation</option>
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-6" data-wow-delay="300ms">
-                                    <select class="form-select bg-light border-0" style="height: 55px;" name="doctor">
-                                        <option selected>Select Services</option>
-                                        <option value="1">Medical Checkup</option>
-                                        <option value="2">TB Dots</option>
-                                        <option value="3">Dental</option>
-                                        <option value="3">Animal Bites</option>
-                                        <option value="3">Pre-natal & Family Planning</option>
-                                        <option value="3">Immunization</option>
-                                        <option value="3">Swab Test</option>
-                                        <option value="3">HIV Test</option>
+                                    <select class="form-select bg-light border-0" style="height: 55px;" name="service" placeholder="Select Services" id="mainCat">
+                                        
+                                        <option value="Medical Checkup">Medical Checkup</option>
+                                        <option value="TB Dots">TB Dots</option>
+                                        <option value="Dental">Dental</option>
+                                        <option value="Animal Bites">Animal Bites</option>
+                                        <option value="Pre-natal & Family Planning">Pre-natal & Family Planning</option>
+                                        <option value="Immunization">Immunization</option>
+                                        <option value="Swab Test">Swab Test</option>
+                                        <option value="HIV Test">HIV Test</option>
 
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="name" style="height: 55px;">
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Name" style="height: 55px" name="name">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="email" style="height: 55px;">
+                                    <input type="email" class="form-control bg-light border-0" placeholder="Email" style="height: 55px;" name="email">
                                 </div>
+                           
+
                                 <div class="col-12 col-sm-6">
                                     <div class="date" id="date" data-target-input="nearest">
-                                        <input type="date"
+                                        <input type="text"
                                             class="form-control bg-light border-0 datetimepicker-input"
-                                            placeholder="Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
+                                            placeholder="Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;" name="date">
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <div class="time" id="time" data-target-input="nearest">
                                         <input type="text"
                                             class="form-control bg-light border-0 datetimepicker-input"
-                                            placeholder="Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
+                                            placeholder="Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;" name="time">
                                     </div>
                                 </div>
+                                
+                            
+
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Make An Appointment</button>
                                 </div>
@@ -447,8 +465,12 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
+     
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/lib/easing/easing.min.js"></script>
     <script src="../assets/lib/waypoints/waypoints.min.js"></script>

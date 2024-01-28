@@ -117,7 +117,7 @@ var DateTimePicker = function ($, moment) {
     var Default = {
         timeZone: '',
         format: false,
-        dayViewHeaderFormat: 'MMMM YYYY',
+        dayViewHeaderFormat: 'MM DD YYYY',
         extraFormats: false,
         stepping: 1,
         minDate: false,
