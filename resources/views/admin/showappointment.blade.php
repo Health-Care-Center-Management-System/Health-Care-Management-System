@@ -27,10 +27,10 @@
     <link href="../assets/css/style.css" rel="stylesheet">
 </head>
   <body>
-    <div class="container-fluid sticky-top bg-white shadow-sm" >
+    <div class="container-fluid  bg-white shadow-sm" >
       <div class="container">
 
-  <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+  <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 ">
       <a href="#home" class="navbar-brand">
           <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>Brgy 14 Healthcare</h1>
       </a>
@@ -71,7 +71,15 @@
       </div>
   </div>
       
-
+  <div class="container-fluid bg-primary py-5 mb-5 hero-header heroheight" id="home">
+    <div class="container py-5">
+        <div class="row justify-content-start">
+            <div class="col-lg-8 text-center text-lg-start">
+                 
+            </div>
+        </div>
+    </div>
+</div>
         <div class="container-fluid py-5" id="about">
           <div class="container">
               <div class="row gx-5">
@@ -84,7 +92,11 @@
                         <th style="padding:10px">Appointment Type</th>
                         <th style="padding:10px">Service</th>
                         <th style="padding:10px">Date</th>
-                        <th style="padding:10px">Time</th>
+                        <th style="padding:10px">ID Number</th>
+                        <th style="padding:10px">Status</th>
+                        <th style="padding:10px"></th>
+                        <th style="padding:10px"></th>
+                        <th style="padding:10px"></th>
      
 
 
@@ -96,12 +108,11 @@
                         <td>{{$appoint->type}}</td>
                         <td>{{$appoint->service}}</td>
                         <td>{{$appoint->date}}</td>
-                        <td>{{$appoint->time}}</td>
-                        
+                        <td>{{$appoint->barangayid}}</td>
+                        <td>{{$appoint->status}}</td>
 
-                <!--    <td>{{$appoint->status}}</td>
                         <td><a class="btn btn-success" href="{{url('approved', $appoint->id)}}">Approved</td>
-                        <td><a class="btn btn-danger" href="{{url('cancelled', $appoint->id)}}">Cancelled</td> -->
+                        <td><a class="btn btn-danger" href="{{url('cancelled', $appoint->id)}}">Cancelled</td> 
                         <td><a class="btn btn-primary" href="{{url('emailview', $appoint->id)}}">Send Mail</td>
                     </tr>
 
@@ -115,8 +126,7 @@
         
 
         
-       
-      <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
+        <div class="container-fluid bg-dark text-light border-top border-secondary py-4 flex-bottom">
           <div class="container">
               <div class="row g-5">
                   <div class="col-md-6 text-center text-md-start">
@@ -125,7 +135,6 @@
                   </div>
               </div>
           </div>
-      </div>
       <!-- Footer End -->
   
   

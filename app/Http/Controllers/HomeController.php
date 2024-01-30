@@ -62,7 +62,8 @@ class HomeController extends Controller
         $data->type=$request->type;
         $data->service=$request->service;
         $data->date=$request->date;
-        $data->time=$request->time;
+        $data->barangayid=$request->barangayid;
+        $data->status="Not Approved";
      
  
         if(Auth::id())
@@ -83,6 +84,7 @@ class HomeController extends Controller
             if(Auth::user()->usertype==0)
             {
                 $userid=Auth::user()->id;
+                
                 $appoint=appointment::where('user_id', $userid)->get();
             return view('user.my_appointment', compact('appoint'));
             }

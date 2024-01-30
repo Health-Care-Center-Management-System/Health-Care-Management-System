@@ -311,7 +311,7 @@
                                     </select>
                                 </div>
                                 <div class="col-12 col-sm-6" data-wow-delay="300ms">
-                                    <select class="form-select bg-light border-0" style="height: 55px;" name="service" placeholder="Select Services" id="mainCat">
+                                    <select class="form-select bg-light border-0" style="height: 55px;" name="service" placeholder="Select Services" >
                                         
                                         <option value="Medical Checkup">Medical Checkup</option>
                                         <option value="TB Dots">TB Dots</option>
@@ -336,15 +336,11 @@
                                     <div class="date" id="date" data-target-input="nearest">
                                         <input type="text"
                                             class="form-control bg-light border-0 datetimepicker-input"
-                                            placeholder="Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;" name="date">
+                                            placeholder="Appointment Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;" name="date">
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <div class="time" id="time" data-target-input="nearest">
-                                        <input type="text"
-                                            class="form-control bg-light border-0 datetimepicker-input"
-                                            placeholder="Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;" name="time">
-                                    </div>
+                                    <input type="text" class="form-control bg-light border-0" placeholder="Barangay ID Number" style="height: 55px;" name="barangayid">
                                 </div>
                                 
                             
