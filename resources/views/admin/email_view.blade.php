@@ -1,8 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en"><base href="/public">
-<!DOCTYPE html>
-<html lang="en">
+
   <head>
     <meta charset="utf-8">
     <title>LGU Healthcare Management System</title>
