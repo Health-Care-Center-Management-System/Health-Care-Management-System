@@ -84,17 +84,21 @@
                 <div class="navbar-nav ms-auto py-0">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="{{url('home')}}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{url('showappointment')}}">Show Appointment</a>
+                  </li>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#about">About Us</a>
+                    <a class="nav-link" href="{{url('showdoctor')}}">Records</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Transaction History</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#service">Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contact">Contact</a>
-                </li>
+                    <a class="nav-link" href="#contact">Approval</a>
+                  </li>
     <!--
                 @if(Route::has('login'))
     

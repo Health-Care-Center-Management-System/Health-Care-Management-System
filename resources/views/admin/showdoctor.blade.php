@@ -48,12 +48,14 @@
             <a class="nav-link" href="{{url('showappointment')}}">Show Appointment</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('showdoctor')}}">Show Doctor</a>
+            <a class="nav-link" href="{{url('showdoctor')}}">Records</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Transaction History</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Approval</a>
+        </li>
         
 
          
